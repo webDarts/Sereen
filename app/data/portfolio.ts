@@ -1,6 +1,6 @@
 export type Locale = "en" | "de";
 
-export const SITE_URL = "https://webdarts.github.io/Serren";
+export const SITE_URL = "https://webdarts.github.io/Sereen";
 
 export const contact = {
   name: "Sereen Madi",
