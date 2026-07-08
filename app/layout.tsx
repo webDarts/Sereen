@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, IBM_Plex_Sans_Arabic } from "next/font/google";
+import { SITE_URL, contact } from "./data/portfolio";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -15,9 +16,53 @@ const plexArabic = IBM_Plex_Sans_Arabic({
 });
 
 export const metadata: Metadata = {
-  title: "Sereen Madi — Portfolio",
+  metadataBase: new URL(SITE_URL),
+  title: "Sereen Madi — Graphic Design Portfolio",
   description:
-    "Portfolio of Sereen Madi, Design & Visual Communication student — graphic design, typography, illustration, packaging and product design.",
+    "Portfolio of Sereen Madi, Design & Visual Communication student — graphic design, Arabic typography, illustration, packaging and product design. Open to internships in Germany.",
+  keywords: [
+    "graphic design",
+    "Arabic typography",
+    "packaging design",
+    "illustration",
+    "portfolio",
+    "Sereen Madi",
+  ],
+  openGraph: {
+    title: "Sereen Madi — Graphic Design Portfolio",
+    description:
+      "Graphic design, Arabic typography, illustration, packaging and product design.",
+    url: `${SITE_URL}/`,
+    siteName: "Sereen Madi — Portfolio",
+    images: [`${SITE_URL}/og.png`],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sereen Madi — Graphic Design Portfolio",
+    description:
+      "Graphic design, Arabic typography, illustration, packaging and product design.",
+    images: [`${SITE_URL}/og.png`],
+  },
+};
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: contact.name,
+  jobTitle: "Graphic Designer",
+  url: `${SITE_URL}/`,
+  email: `mailto:${contact.email}`,
+  sameAs: [contact.linkedin],
+  knowsLanguage: ["ar", "en", "de"],
+  knowsAbout: [
+    "Graphic Design",
+    "Arabic Typography",
+    "Packaging Design",
+    "Illustration",
+    "Type Design",
+  ],
 };
 
 export default function RootLayout({
@@ -37,6 +82,10 @@ export default function RootLayout({
             __html:
               '(function(){try{var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.classList.add("dark")}catch(e){}})()',
           }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
         {children}
       </body>

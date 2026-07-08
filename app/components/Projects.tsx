@@ -1,18 +1,24 @@
-import Image from "next/image";
-import { projects } from "../data/portfolio";
+import type { Content } from "../data/portfolio";
 import { asset } from "../lib/asset";
+import Gallery from "./Gallery";
 import Reveal from "./Reveal";
 
-export default function Projects() {
+export default function Projects({
+  ui,
+  projects,
+}: {
+  ui: Content["ui"];
+  projects: Content["projects"];
+}) {
   return (
     <section id="work" className="scroll-mt-20 px-6 py-24">
       <div className="mx-auto max-w-6xl">
         <Reveal>
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue">
-            Selected Work
+            {ui.workKicker}
           </p>
           <h2 className="mt-3 text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
-            Projects
+            {ui.workTitle}
           </h2>
         </Reveal>
 
@@ -53,27 +59,28 @@ export default function Projects() {
                         {para}
                       </p>
                     ))}
+                    <div className="mt-6 flex flex-wrap items-center gap-2">
+                      <span className="rounded-full bg-blue-mist px-3 py-1 text-xs font-semibold text-ink/80">
+                        {project.context}
+                      </span>
+                      {project.tools.map((tool) => (
+                        <span
+                          key={tool}
+                          className="rounded-full border border-ink/15 px-3 py-1 text-xs font-medium text-ink/60"
+                        >
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
                   </div>
 
-                  <div
-                    className={`grid gap-4 lg:col-span-3 ${
-                      project.images.length > 1 ? "sm:grid-cols-2" : ""
-                    }`}
-                  >
-                    {project.images.map((img, j) => (
-                      <Image
-                        key={img.src}
-                        src={asset(img.src)}
-                        alt={img.alt}
-                        width={img.width}
-                        height={img.height}
-                        className={`w-full rounded-xl border border-ink/5 object-cover shadow-sm ${
-                          project.images.length % 2 === 1 && j === 0
-                            ? "sm:col-span-2"
-                            : ""
-                        }`}
-                      />
-                    ))}
+                  <div className={`lg:col-span-3 ${flipped ? "lg:order-1" : ""}`}>
+                    <Gallery
+                      images={project.images.map((img) => ({
+                        ...img,
+                        src: asset(img.src),
+                      }))}
+                    />
                   </div>
                 </article>
               </Reveal>

@@ -1,9 +1,15 @@
 import Image from "next/image";
-import { about } from "../data/portfolio";
+import type { Content } from "../data/portfolio";
 import { asset } from "../lib/asset";
 import Reveal from "./Reveal";
 
-export default function About() {
+export default function About({
+  ui,
+  about,
+}: {
+  ui: Content["ui"];
+  about: Content["about"];
+}) {
   return (
     <section id="about" className="scroll-mt-20 px-6 py-24">
       <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
@@ -22,7 +28,7 @@ export default function About() {
         </Reveal>
         <Reveal delay={120}>
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue">
-            About me
+            {ui.aboutKicker}
           </p>
           <h2 className="mt-3 text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
             {about.greeting}

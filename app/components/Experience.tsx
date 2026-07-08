@@ -1,18 +1,24 @@
 import Image from "next/image";
-import { experience } from "../data/portfolio";
+import type { Content } from "../data/portfolio";
 import { asset } from "../lib/asset";
 import Reveal from "./Reveal";
 
-export default function Experience() {
+export default function Experience({
+  ui,
+  experience,
+}: {
+  ui: Content["ui"];
+  experience: Content["experience"];
+}) {
   return (
     <section id="experience" className="scroll-mt-20 px-6 py-24">
       <div className="mx-auto max-w-6xl">
         <Reveal>
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue">
-            Experience
+            {ui.expKicker}
           </p>
           <h2 className="mt-3 text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
-            Work Experience
+            {ui.expTitle}
           </h2>
         </Reveal>
 

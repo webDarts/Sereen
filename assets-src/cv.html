@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A4; margin: 0; }
+  html, body { width: 210mm; height: 297mm; }
+  body {
+    font-family: "Poppins", sans-serif;
+    color: #1c1e24;
+    background: #f2f0ea;
+    padding: 15mm 16mm;
+    font-size: 9.5pt;
+    line-height: 1.45;
+  }
+  header { border-bottom: 3px solid #0d3fc2; padding-bottom: 6mm; margin-bottom: 7mm; }
+  h1 { font-size: 26pt; font-weight: 800; letter-spacing: -0.5pt; color: #0d3fc2; }
+  .role { font-size: 11pt; font-weight: 600; margin-top: 1mm; }
+  .contact { margin-top: 2.5mm; font-size: 8.5pt; color: #44464e; }
+  .contact span { margin-right: 5mm; }
+  .avail { margin-top: 2mm; font-size: 8.5pt; font-weight: 600; color: #0d3fc2; }
+  h2 {
+    font-size: 9pt; font-weight: 700; text-transform: uppercase; letter-spacing: 2pt;
+    color: #0d3fc2; margin: 6mm 0 2.5mm;
+  }
+  .cols { display: grid; grid-template-columns: 1.5fr 1fr; gap: 10mm; }
+  .item { margin-bottom: 3.5mm; }
+  .period { font-size: 8pt; font-weight: 600; color: #6b6e78; text-transform: uppercase; letter-spacing: 0.5pt; }
+  .item h3 { font-size: 10pt; font-weight: 700; }
+  .place { font-size: 8.5pt; color: #44464e; }
+  ul { list-style: none; margin-top: 1mm; }
+  li { padding-left: 4mm; position: relative; font-size: 8.5pt; color: #34363e; }
+  li::before { content: ""; position: absolute; left: 0; top: 2mm; width: 1.4mm; height: 1.4mm; border-radius: 50%; background: #a7bce4; }
+  .skill { display: flex; justify-content: space-between; border-bottom: 1px solid #dcdad2; padding: 1.2mm 0; font-size: 8.5pt; }
+  .skill b { font-weight: 600; }
+  .skill span { color: #6b6e78; }
+  .chips { display: flex; flex-wrap: wrap; gap: 1.5mm; margin-top: 1mm; }
+  .chip { border: 1px solid #0d3fc2; color: #0d3fc2; border-radius: 10mm; padding: 0.8mm 3mm; font-size: 7.5pt; font-weight: 600; }
+  footer { position: fixed; bottom: 10mm; left: 16mm; right: 16mm; border-top: 1px solid #dcdad2; padding-top: 2.5mm; font-size: 7.5pt; color: #6b6e78; display: flex; justify-content: space-between; }
+  footer a { color: #0d3fc2; text-decoration: none; font-weight: 600; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Sereen Madi</h1>
+    <p class="role">Design &amp; Visual Communication — Graphic Design · Arabic Typography · Packaging · Illustration</p>
+    <p class="contact">
+      <span>sereenzaid0@gmail.com</span>
+      <span>+49 152 157 703 14</span>
+      <span>Gießen, Germany</span>
+      <span>linkedin.com/in/sereen-madi-2b6116362</span>
+    </p>
+    <p class="avail">Open to internships and working student positions in graphic design.</p>
+  </header>
+
+  <div class="cols">
+    <div>
+      <h2>Education</h2>
+      <div class="item">
+        <p class="period">Feb 2026 – Aug 2026</p>
+        <h3>Exchange Semester, B.A. Design and Visual Communication</h3>
+        <p class="place">Technische Hochschule Mittelhessen (THM), Gießen, Germany</p>
+      </div>
+      <div class="item">
+        <p class="period">Since Sep 2022</p>
+        <h3>B.A. Design and Visual Communication</h3>
+        <p class="place">German-Jordanian University (GJU), Amman, Jordan</p>
+      </div>
+      <div class="item">
+        <p class="period">Jun 2022</p>
+        <h3>General Secondary Education Certificate (Tawjihi)</h3>
+        <p class="place">Universal Civilization Academy, Amman, Jordan</p>
+      </div>
+
+      <h2>Experience</h2>
+      <div class="item">
+        <p class="period">2025</p>
+        <h3>Internship — Estudio, Commercial Photography Studio</h3>
+        <ul>
+          <li>Assisted with photoshoots and created moodboards</li>
+          <li>Wrote social media content and captured behind-the-scenes material</li>
+          <li>Worked as part of a production team</li>
+        </ul>
+      </div>
+      <div class="item">
+        <p class="period">2025</p>
+        <h3>Participant — Photography Workshop, Estudio</h3>
+        <ul>
+          <li>Camera fundamentals, lighting techniques and the effect of light in images</li>
+        </ul>
+      </div>
+      <div class="item">
+        <p class="period">2025</p>
+        <h3>Head of Volunteer Team — GJU Fashion Show “Stitched Cities”</h3>
+        <ul>
+          <li>Coordinated the volunteer team and organized backstage operations</li>
+          <li>Supported a smooth and timely show schedule</li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <h2>Focus Areas</h2>
+      <div class="chips">
+        <span class="chip">Brand Identity</span>
+        <span class="chip">Arabic Typography</span>
+        <span class="chip">Packaging Design</span>
+        <span class="chip">Illustration</span>
+        <span class="chip">Editorial &amp; Type Design</span>
+        <span class="chip">Concept Development</span>
+      </div>
+
+      <h2>Software</h2>
+      <div class="skill"><b>Adobe Illustrator</b><span>very good</span></div>
+      <div class="skill"><b>Adobe Photoshop</b><span>good</span></div>
+      <div class="skill"><b>Adobe InDesign</b><span>good</span></div>
+      <div class="skill"><b>Glyphs</b><span>type design</span></div>
+      <div class="skill"><b>MS PowerPoint</b><span>good</span></div>
+
+      <h2>Languages</h2>
+      <div class="skill"><b>Arabic</b><span>native</span></div>
+      <div class="skill"><b>English</b><span>fluent</span></div>
+      <div class="skill"><b>German</b><span>B1</span></div>
+
+      <h2>Selected Projects</h2>
+      <div class="item">
+        <h3>Khat Khabar — Arabic typeface</h3>
+        <p class="place">Semi-geometric headline typeface built in Glyphs</p>
+      </div>
+      <div class="item">
+        <h3>SAJ Zinger Packaging</h3>
+        <p class="place">Reusable sandwich box, designed with restaurant SAJ</p>
+      </div>
+      <div class="item">
+        <h3>Bloom Pot for Peace Lily</h3>
+        <p class="place">Self-humidifying ceramic plant pot, clay prototype</p>
+      </div>
+      <div class="item">
+        <h3>Cultural Fund Logo</h3>
+        <p class="place">Identity for a cultural &amp; artistic support fund</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span>Sereen Madi — CV</span>
+    <a href="https://webdarts.github.io/Serren/">Portfolio: webdarts.github.io/Serren</a>
+  </footer>
+</body>
+</html>

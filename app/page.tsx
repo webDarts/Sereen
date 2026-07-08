@@ -1,21 +1,17 @@
-import Nav from "./components/Nav";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Education from "./components/Education";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import Footer from "./components/Footer";
+import type { Metadata } from "next";
+import Site from "./components/Site";
+import { SITE_URL } from "./data/portfolio";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: `${SITE_URL}/`,
+    languages: {
+      en: `${SITE_URL}/`,
+      de: `${SITE_URL}/de/`,
+    },
+  },
+};
 
 export default function Home() {
-  return (
-    <main>
-      <Nav />
-      <Hero />
-      <About />
-      <Education />
-      <Experience />
-      <Projects />
-      <Footer />
-    </main>
-  );
+  return <Site locale="en" />;
 }
