@@ -1,12 +1,27 @@
 @import "tailwindcss";
 
 :root {
+  color-scheme: light;
   --cream: #f2f0ea;
   --ink: #1c1e24;
   --blue: #0d3fc2;
   --blue-deep: #0a33a0;
   --blue-soft: #a7bce4;
   --blue-mist: #ccd8ee;
+  --surface: #f2f0ea;
+  --card: rgba(255, 255, 255, 0.6);
+  --panel: #0d3fc2;
+}
+
+.dark {
+  color-scheme: dark;
+  --ink: #e9e7e0;
+  --blue: #8aa5f6;
+  --blue-deep: #b3c5fa;
+  --blue-mist: #232d4f;
+  --surface: #13151b;
+  --card: rgba(255, 255, 255, 0.05);
+  --panel: #101b3d;
 }
 
 @theme inline {
@@ -16,6 +31,9 @@
   --color-blue-deep: var(--blue-deep);
   --color-blue-soft: var(--blue-soft);
   --color-blue-mist: var(--blue-mist);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-panel: var(--panel);
   --font-sans: var(--font-poppins);
   --font-arabic: var(--font-arabic);
 }
@@ -25,9 +43,10 @@ html {
 }
 
 body {
-  background: var(--cream);
+  background: var(--surface);
   color: var(--ink);
   font-family: var(--font-poppins), sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 [lang="ar"] {
@@ -36,7 +55,7 @@ body {
 
 ::selection {
   background: var(--blue);
-  color: var(--cream);
+  color: var(--surface);
 }
 
 /* Scroll-reveal */

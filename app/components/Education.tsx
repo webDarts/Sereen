@@ -3,7 +3,7 @@ import Reveal from "./Reveal";
 
 export default function Education() {
   return (
-    <section id="education" className="scroll-mt-20 bg-blue px-6 py-24 text-cream">
+    <section id="education" className="scroll-mt-20 bg-panel px-6 py-24 text-cream">
       <div className="mx-auto max-w-6xl">
         <Reveal>
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-soft">

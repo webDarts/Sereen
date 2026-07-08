@@ -19,7 +19,7 @@ export default function Experience() {
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {experience.map((item, i) => (
             <Reveal key={item.place} delay={i * 120}>
-              <article className="flex h-full flex-col rounded-2xl border border-ink/10 bg-white/60 p-7 shadow-sm">
+              <article className="flex h-full flex-col rounded-2xl border border-ink/10 bg-card p-7 shadow-sm">
                 <p className="text-sm font-bold text-blue">{item.year}</p>
                 <h3 className="mt-2 text-xl font-bold leading-snug text-ink">
                   {item.role}
