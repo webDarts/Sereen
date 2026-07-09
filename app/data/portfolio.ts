@@ -59,38 +59,37 @@ export type Content = {
 
 const images = {
   logo: [
-    { src: "/images/logo-paper.jpeg", width: 800, height: 600 },
-    { src: "/images/logo-keychain.jpeg", width: 800, height: 600 },
+    { src: "/images/logo-paper.jpeg", width: 1800, height: 1350 },
+    { src: "/images/logo-keychain.jpeg", width: 1800, height: 1350 },
   ],
   illustration: [
-    { src: "/images/illustration-poster.jpeg", width: 800, height: 600 },
-    { src: "/images/illustration-moodboard.png", width: 560, height: 560 },
+    { src: "/images/illustration-poster.jpeg", width: 1800, height: 1350 },
+    { src: "/images/illustration-moodboard.jpeg", width: 1080, height: 1080 },
   ],
   bloompot: [
-    { src: "/images/bloompot-poster.jpeg", width: 565, height: 800 },
-    { src: "/images/bloompot-process.png", width: 800, height: 593 },
-    { src: "/images/bloompot-detail-1.jpeg", width: 427, height: 640 },
-    { src: "/images/bloompot-detail-2.jpeg", width: 533, height: 800 },
+    { src: "/images/bloompot-poster.jpeg", width: 1273, height: 1800 },
+    { src: "/images/bloompot-process.jpeg", width: 1800, height: 1336 },
+    { src: "/images/bloompot-detail-1.jpeg", width: 1800, height: 1200 },
   ],
   typography: [
-    { src: "/images/typography-trifold.jpeg", width: 800, height: 600 },
-    { src: "/images/typography-clear-sensitive.jpeg", width: 800, height: 600 },
-    { src: "/images/typography-worried.jpeg", width: 800, height: 600 },
+    { src: "/images/typography-trifold.jpeg", width: 1800, height: 1350 },
+    { src: "/images/typography-clear-sensitive.jpeg", width: 1800, height: 1350 },
+    { src: "/images/typography-worried.jpeg", width: 1800, height: 1350 },
   ],
   packaging: [
-    { src: "/images/packaging-closed.jpeg", width: 533, height: 800 },
-    { src: "/images/packaging-open.jpeg", width: 533, height: 800 },
-    { src: "/images/packaging-sauce.jpeg", width: 480, height: 720 },
-    { src: "/images/packaging-hand.jpeg", width: 480, height: 720 },
+    { src: "/images/packaging-closed.jpeg", width: 1800, height: 1200 },
+    { src: "/images/packaging-open.jpeg", width: 1800, height: 1200 },
+    { src: "/images/packaging-sauce.jpeg", width: 1800, height: 1200 },
+    { src: "/images/packaging-hand.jpeg", width: 1800, height: 1200 },
   ],
   ornaments: [
-    { src: "/images/ornament-blue.jpeg", width: 800, height: 600 },
-    { src: "/images/ornament-pink.jpeg", width: 800, height: 600 },
-    { src: "/images/ornament-notebook.jpeg", width: 800, height: 600 },
+    { src: "/images/ornament-blue.jpeg", width: 1800, height: 1350 },
+    { src: "/images/ornament-pink.jpeg", width: 1800, height: 1350 },
+    { src: "/images/ornament-notebook.jpeg", width: 1800, height: 1350 },
   ],
   khat: [
-    { src: "/images/khatkhabar-poster.jpeg", width: 800, height: 600 },
-    { src: "/images/khatkhabar-glyphs.png", width: 800, height: 618 },
+    { src: "/images/khatkhabar-poster.jpeg", width: 1800, height: 1350 },
+    { src: "/images/khatkhabar-glyphs.png", width: 1800, height: 1391 },
   ],
 };
 
@@ -252,7 +251,6 @@ export const content: Record<Locale, Content> = {
         images: withAlts(images.bloompot, [
           "Final poster — Bloom Pot with peace lily",
           "Process — sketches and clay form iterations",
-          "Detail — pot rim and soil",
           "Detail — double-walled ceramic reservoir",
         ]),
       },
@@ -477,7 +475,6 @@ export const content: Record<Locale, Content> = {
         images: withAlts(images.bloompot, [
           "Finales Plakat — Bloom Pot mit Friedenslilie",
           "Prozess — Skizzen und Formvarianten in Ton",
-          "Detail — Topfrand und Erde",
           "Detail — doppelwandiges Keramikreservoir",
         ]),
       },

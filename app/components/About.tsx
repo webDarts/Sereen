@@ -19,8 +19,8 @@ export default function About({
             <Image
               src={asset(about.photo)}
               alt="Portrait of Sereen Madi"
-              width={800}
-              height={600}
+              width={1600}
+              height={1200}
               className="relative rounded-2xl object-cover shadow-sm"
               priority
             />

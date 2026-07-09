@@ -49,8 +49,8 @@ export default function Experience({
             <Image
               src={asset("/images/experience-studio.jpeg")}
               alt="Commercial photography studio with lighting equipment"
-              width={1787}
-              height={1192}
+              width={1800}
+              height={1013}
               className="h-64 w-full object-cover sm:h-80"
             />
           </div>
