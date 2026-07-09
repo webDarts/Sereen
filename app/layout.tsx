@@ -33,9 +33,9 @@ export const metadata: Metadata = {
     title: "Sereen Madi — Graphic Design Portfolio",
     description:
       "Graphic design, Arabic typography, illustration, packaging and product design.",
-    url: `${SITE_URL}/`,
+    url: `${SITE_URL}`,
     siteName: "Sereen Madi — Portfolio",
-    images: [`${SITE_URL}/og.png`],
+    images: [`${SITE_URL}og.png`],
     locale: "en_US",
     type: "website",
   },
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Sereen Madi — Graphic Design Portfolio",
     description:
       "Graphic design, Arabic typography, illustration, packaging and product design.",
-    images: [`${SITE_URL}/og.png`],
+    images: [`${SITE_URL}og.png`],
   },
 };
 
@@ -53,7 +53,7 @@ const personJsonLd = {
   "@type": "Person",
   name: contact.name,
   jobTitle: "Graphic Designer",
-  url: `${SITE_URL}/`,
+  url: `${SITE_URL}`,
   email: `mailto:${contact.email}`,
   sameAs: [contact.linkedin],
   knowsLanguage: ["ar", "en", "de"],

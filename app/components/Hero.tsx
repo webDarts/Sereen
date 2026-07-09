@@ -19,7 +19,7 @@ export default function Hero({ ui }: { ui: Content["ui"] }) {
     >
       <div className="mx-auto w-full max-w-6xl">
         <p className="mb-1 text-sm font-semibold uppercase tracking-[0.35em] text-ink/60">
-          {contact.name} — {ui.tagline}
+          {ui.tagline}
         </p>
 
         {/* Layered wordmark, echoing the PDF cover */}
@@ -31,10 +31,10 @@ export default function Hero({ ui }: { ui: Content["ui"] }) {
               className="absolute inset-x-0 top-1/2 -translate-y-1/2 whitespace-nowrap"
               style={{ transform: `translateY(calc(-50% + ${layer.y}))`, opacity: layer.opacity }}
             >
-              portfolio
+              SEREEN
             </span>
           ))}
-          <h1 className="relative whitespace-nowrap">portfolio</h1>
+          <h1 className="relative whitespace-nowrap">SEREEN</h1>
         </div>
 
         <p className="text-base font-semibold text-ink/80">{ui.focusLine}</p>

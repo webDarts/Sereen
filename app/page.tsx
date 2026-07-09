@@ -4,10 +4,10 @@ import { SITE_URL } from "./data/portfolio";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: `${SITE_URL}/`,
+    canonical: `${SITE_URL}`,
     languages: {
-      en: `${SITE_URL}/`,
-      de: `${SITE_URL}/de/`,
+      en: `${SITE_URL}`,
+      de: `${SITE_URL}de/`,
     },
   },
 };
