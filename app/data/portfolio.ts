@@ -69,7 +69,7 @@ const images = {
   bloompot: [
     { src: "/images/bloompot-poster.jpeg", width: 1273, height: 1800 },
     { src: "/images/bloompot-process.jpeg", width: 1800, height: 1336 },
-    { src: "/images/bloompot-detail-1.jpeg", width: 1200, height: 1800 },
+    { src: "/images/bloompot-detail-1.jpeg", width: 1800, height: 1200 },
   ],
   typography: [
     { src: "/images/typography-trifold.jpeg", width: 1800, height: 1350 },
