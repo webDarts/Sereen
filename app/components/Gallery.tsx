@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 type GalleryImage = { src: string; alt: string; width: number; height: number };
 
 export default function Gallery({ images }: { images: GalleryImage[] }) {
   const [open, setOpen] = useState<number | null>(null);
+  const overlayRef = useRef<HTMLDivElement>(null);
 
   const close = useCallback(() => setOpen(null), []);
   const step = useCallback(
@@ -15,18 +16,55 @@ export default function Gallery({ images }: { images: GalleryImage[] }) {
     [images.length]
   );
 
+  // Lightbox keyboard handling + focus trap + scrollbar compensation
   useEffect(() => {
     if (open === null) return;
+
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") close();
       if (e.key === "ArrowRight") step(1);
       if (e.key === "ArrowLeft") step(-1);
+      if (e.key === "Tab") {
+        const overlay = overlayRef.current;
+        if (!overlay) return;
+        const focusable = overlay.querySelectorAll<HTMLElement>(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        if (focusable.length === 0) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
     };
-    document.addEventListener("keydown", onKey);
+
+    // Compensate for scrollbar disappearing
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    if (scrollbarWidth > 0) {
+      document.documentElement.style.paddingRight = `${scrollbarWidth}px`;
+    }
     document.documentElement.style.overflow = "hidden";
+
+    // Focus first focusable element in the lightbox
+    requestAnimationFrame(() => {
+      const overlay = overlayRef.current;
+      if (!overlay) return;
+      const first = overlay.querySelector<HTMLElement>(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      first?.focus();
+    });
+
+    document.addEventListener("keydown", onKey);
     return () => {
       document.removeEventListener("keydown", onKey);
       document.documentElement.style.overflow = "";
+      document.documentElement.style.paddingRight = "";
     };
   }, [open, close, step]);
 
@@ -56,6 +94,7 @@ export default function Gallery({ images }: { images: GalleryImage[] }) {
 
       {open !== null && (
         <div
+          ref={overlayRef}
           role="dialog"
           aria-modal="true"
           aria-label={images[open].alt}

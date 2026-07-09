@@ -6,6 +6,7 @@ export default function ThemeToggle() {
   const [dark, setDark] = useState<boolean | null>(null);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setDark(document.documentElement.classList.contains("dark"));
   }, []);
 
@@ -17,6 +18,19 @@ export default function ThemeToggle() {
       localStorage.setItem("theme", next ? "dark" : "light");
     } catch {}
   };
+
+  if (dark === null) {
+    return (
+      <button
+        type="button"
+        aria-label="Toggle theme"
+        className="flex h-8 w-8 items-center justify-center rounded-full text-ink/70"
+        disabled
+      >
+        <span className="h-4 w-4" />
+      </button>
+    );
+  }
 
   return (
     <button

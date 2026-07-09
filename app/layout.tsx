@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, IBM_Plex_Sans_Arabic } from "next/font/google";
 import { SITE_URL, contact } from "./data/portfolio";
+import LangSetter from "./components/LangSetter";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -77,6 +78,7 @@ export default function RootLayout({
       className={`${poppins.variable} ${plexArabic.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <LangSetter />
         <script
           dangerouslySetInnerHTML={{
             __html:
