@@ -23,7 +23,7 @@ export default function Hero({ ui }: { ui: Content["ui"] }) {
         </p>
 
         {/* Layered wordmark, echoing the PDF cover */}
-        <div className="relative select-none py-[1.6em] text-[clamp(3rem,10.5vw,8.5rem)] font-extrabold leading-none tracking-tight text-blue">
+        <div className="relative select-none py-[1.6em] text-[clamp(2.6rem,9vw,7.5rem)] font-extrabold leading-none tracking-tight text-blue">
           {echoLayers.map((layer, i) => (
             <span
               key={i}
@@ -31,10 +31,10 @@ export default function Hero({ ui }: { ui: Content["ui"] }) {
               className="absolute inset-x-0 top-1/2 -translate-y-1/2 whitespace-nowrap"
               style={{ transform: `translateY(calc(-50% + ${layer.y}))`, opacity: layer.opacity }}
             >
-              SEREEN
+              sereen madi
             </span>
           ))}
-          <h1 className="relative whitespace-nowrap">SEREEN</h1>
+          <h1 className="relative whitespace-nowrap">sereen madi</h1>
         </div>
 
         <p className="text-base font-semibold text-ink/80">{ui.focusLine}</p>

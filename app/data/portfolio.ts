@@ -69,7 +69,7 @@ const images = {
   bloompot: [
     { src: "/images/bloompot-poster.jpeg", width: 1273, height: 1800 },
     { src: "/images/bloompot-process.jpeg", width: 1800, height: 1336 },
-    { src: "/images/bloompot-detail-1.jpeg", width: 1800, height: 1200 },
+    { src: "/images/bloompot-detail-1.jpeg", width: 1200, height: 1800 },
   ],
   typography: [
     { src: "/images/typography-trifold.jpeg", width: 1800, height: 1350 },
@@ -77,8 +77,8 @@ const images = {
     { src: "/images/typography-worried.jpeg", width: 1800, height: 1350 },
   ],
   packaging: [
-    { src: "/images/packaging-closed.jpeg", width: 1200, height: 1800 },
-    { src: "/images/packaging-open.jpeg", width: 1200, height: 1800 },
+    { src: "/images/packaging-closed.jpeg", width: 1800, height: 1767 },
+    { src: "/images/packaging-open.jpeg", width: 1800, height: 1322 },
     { src: "/images/packaging-sauce.jpeg", width: 1200, height: 1800 },
     { src: "/images/packaging-hand.jpeg", width: 1200, height: 1800 },
   ],
