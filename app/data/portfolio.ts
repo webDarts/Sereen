@@ -80,7 +80,7 @@ const images = {
     { src: "/images/packaging-closed.jpeg", width: 1800, height: 1767 },
     { src: "/images/packaging-open.jpeg", width: 1800, height: 1322 },
     { src: "/images/packaging-sauce.jpeg", width: 1200, height: 1800 },
-    { src: "/images/packaging-hand.jpeg", width: 1200, height: 1800 },
+    { src: "/images/packaging-hand.jpeg", width: 1625, height: 1800 },
   ],
   ornaments: [
     { src: "/images/ornament-blue.jpeg", width: 1800, height: 1350 },
